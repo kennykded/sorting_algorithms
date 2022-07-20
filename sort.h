@@ -1,7 +1,14 @@
 #ifndef _SORTING_H_
 #define _SORTING_H_
+#include <stdlib.h>
+#include <stdbool.h>
 #include <stdio.h>
 
+
+
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
 
 /** Struct Double Linked List */
 
@@ -31,5 +38,19 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
-
+void quick_sort_rec(int *array, int lower, int higher, size_t size);
+int lomuto_partition(int *array, int lower, int higher, size_t size);
+void swap_ints(int *a, int *b);
+void cocktail_sort_list(listint_t **list);
+int partition(int *array, int lo, int hi, size_t size);
+void quick_s(int *array, int lo, int hi, size_t size);
+void counting_sort(int *array, size_t size);
+void merge(size_t lo, size_t mi, size_t hi, int *dest, int *src);
+void merge_sort(int *array, size_t size);
+void merge_partition(size_t lo, size_t hi, int *array, int *base);
+void radix_sort(int *array, size_t size);
+int getCantRep(int num);
+void swap_root(int *array, size_t root, size_t hi, size_t size);
+void heap_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
 #endif
